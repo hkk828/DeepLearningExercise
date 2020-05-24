@@ -41,7 +41,7 @@ Train_Loss = []
 Valid_Loss = []
 
 # Training Session
-num_epochs = 10
+num_epochs = 25
 loss_record = 100
 for epoch in range(num_epochs):
     for data in train_data:
@@ -93,7 +93,7 @@ plt.plot(x_axis, Train_Loss, 'r-')
 plt.plot(x_axis, Valid_Loss, 'b--')
 plt.legend(['Training Loss', 'Validation Loss'])
 min_loss_idx = Valid_Loss.index(min(Valid_Loss))
-plt.plot(min_loss_idx+1, Valid_Loss[min_loss_idx], 'k.')
+plt.plot(min_loss_idx+1, Valid_Loss[min_loss_idx].data, '.k')
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.show()
